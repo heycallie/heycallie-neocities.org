@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Final Test</title>
+    <script src="script.js" async></script>
+    <script src="dragscript.js" async></script>
+    <link rel="stylesheet" href="navstyle.css" />
+    <link rel="stylesheet" href="popupstyle.css" />
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+    />
+  </head>
+
+  <body>
+    <!-- About Me Window -->
+    <div id="window" class="window">
+      <div id="windowDrag">
+        <img
+          src="assets/ie7.ico"
+          height="20px"
+          style="
+            float: left;
+            vertical-align: middle;
+            padding-top: 3px;
+            padding-left: 3px;
+          "
+        />
+        <span
+          style="
+            padding-top: 3px;
+            vertical-align: middle;
+            float: left;
+            padding-left: 6px;
+            font-family: Pixelify Sans;
+          "
+        >
+          Window 1 - Internet Explorer
+        </span>
+        <div id="closeWindowButton" onclick="closeTab()"></div>
+      </div>
+      <div id="navBar">
+        <div id="fileButton" class="navButton">
+          <p><u>F</u>ile</p>
+        </div>
+
+        <div id="fileDropdown" class="hidden navDropdown">
+          <div
+            onclick="
+              closeTab();
+              checkFileDropdown();
+            "
+            id="selection"
+          >
+            <u>C</u>lose
+          </div>
+
+          <div onclick="pageSource()" id="selection">
+            <u>V</u>iew Page Source
+          </div>
+        </div>
+
+        <div id="editButton" class="navButton">
+          <p><u>E</u>dit</p>
+        </div>
+
+        <div id="viewButton" class="navButton">
+          <p><u>V</u>iew</p>
+        </div>
+
+        <div
+          style="
+            background-color: white;
+            height: 100%;
+            width: 32px;
+            right: 0px;
+            position: absolute;
+            border-left: 1px solid gray;
+          "
+        >
+          <img src="assets/WinXP.svg" style="height: 90%; padding-top: 1px" />
+        </div>
+      </div>
+
+      <div
+        style="
+          z-index: 2;
+          height: calc(100% - 47px);
+          bottom: 0px;
+          width: 100%;
+          position: absolute;
+        "
+        class="webBox"
+        id="webBoxWindowOne"
+      >
+        <div
+          style="
+            background-color: black;
+            height: 85%;
+            width: 85%;
+            position: absolute;
+            top: 10px;
+            left: 23px;
+          "
+        >
+          <div
+            style="
+              height: 60px;
+              width: 100%;
+              background: url(assets/femt.jpg);
+              background-size: 100% 100%;
+              position: absolute;
+            "
+          >
+            <h1 style="margin-top: 10px">
+              <span style="color: red">FEM</span>TANYL
+            </h1>
+          </div>
+          <p
+            style="
+              margin-top: 70px;
+              color: white;
+              margin-left: 5px;
+              margin-right: 5px;
+            "
+          >
+            guys im gonna be honest, i love her music so much. shes honestly my
+            #1 artist ever of all time +++ releases music like... somewhat
+            constantly??? its literally gay furry adhd autism music, which like,
+            not to say im a furry or i have autism, but still its so great when
+            theres just a bit too much going on up there in the cranium and i
+            need a lil break :3 anyway yeah femtanyl love femtanyl life <3
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="window2" class="draggable window hidden">
+      <div id="window2Drag">
+        <img
+          src="assets/ie7.ico"
+          height="20"
+          style="float: left; padding: 3px 0 0 3px"
+        />
+        <span
+          style="
+            float: left;
+            padding-left: 6px;
+            font-family: Pixelify Sans;
+            vertical-align: middle;
+            padding-top: 3px;
+          "
+          >About Me 2 - Internet Explorer</span
+        >
+        <div id="closeWindowButton2" onclick="closeTab('window2')"></div>
+      </div>
+
+      <div id="navBar">
+        <div id="fileButton" class="navButton">
+          <p><u>F</u>ile</p>
+        </div>
+
+        <div id="fileDropdown" class="hidden navDropdown">
+          <div
+            onclick="
+              closeTab();
+              checkFileDropdown();
+            "
+            id="selection"
+          >
+            <u>C</u>lose
+          </div>
+        </div>
+
+        <div id="editButton" class="navButton">
+          <p><u>E</u>dit</p>
+        </div>
+
+        <div id="editDropdown" class="hidden navDropdown">
+          <div onclick="checkEditDropdown()" id="selection">
+            Hello World! Hello World!
+          </div>
+        </div>
+
+        <div id="viewButton" class="navButton">
+          <p><u>V</u>iew</p>
+        </div>
+      </div>
+      <div
+        style="
+          z-index: 2;
+          height: calc(100% - 47px);
+          bottom: 0;
+          width: 100%;
+          position: absolute;
+        "
+        class="webBox"
+      >
+        <p style="font-family: Arial; margin-top: 10px">hi from window2</p>
+      </div>
+    </div>
+
+    <h1 onclick="openTab('window2')" style="text-decoration: underline">
+      Toggle Window 2
+    </h1>
+
+    <h1 onclick="openTab()" style="text-decoration: underline">
+      Toggle Window 1
+    </h1>
+  </body>
+</html>
